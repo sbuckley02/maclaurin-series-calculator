@@ -1,0 +1,31 @@
+body {
+    background-color: pink;
+    text-align: center;
+    font-family: "Trebuchet MS";
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+h1 {
+    text-shadow: white 1px 1px;
+}
+
+#funcInp {
+    width: 250px;
+}
+
+#numInp {
+    width: 30px;
+}
+
+#btn {
+    background-color: #2bbd3c;
+    color: white;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+}
+
+#seriesTxt {
+    font-size: 20px;
+}

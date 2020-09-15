@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maclaurin Series Calculator</title>
+        <link href="styles.css" rel="stylesheet"></style>
+        <script src="calculator.js"></script>
+    </head>
+    <body>
+        <br> <h1>Maclaurin and Taylor Series Calculator</h1>
+        <p>Made by Stephen Buckley</p>
+        <p>Enter a function below, in terms of x. Any multiplication, like "5x", must
+            be expressed as "5*x". Exponents are represented by "^" and functions, like
+            sin, cos, or ln, must be followed by parentheses.
+        </p>
+        <p>You can either find the Maclaurin or a Taylor Series representation of the function
+            you input. Choose which one you want below. If you want a Taylor Series, a random one
+            (the center is a random integer between 1 and 9) will be given. Also, please enter the
+            number of terms of the series you want below. 
+        </p>
+
+        <br>Type of Series:<br>
+        <div id="seriesType">
+            <input type="radio" name="seriesType" value="maclaurin" checked> Maclaurin<br>
+            <input type="radio" name="seriesType" value="taylor"> Taylor<br>
+        </div>
+        <br>Enter function:
+        <input id="funcInp">
+        <br>Enter the number of terms:
+        <input id="numInp" type="number" min="0" max="50">
+        <br><br><button type="button" id="btn" onclick = "onClick()">Find Series</button>
+
+        <br><br><p id="seriesTxt"></p>
+
+        <script>
+            let funcInp = document.getElementById("funcInp");
+            let numInp = document.getElementById("numInp");
+            let seriesTxt = document.getElementById("seriesTxt");
+
+            function getSeriesType() {
+                return document.querySelector('input[name="seriesType"]:checked').value;
+            }
+        </script>
+    </body>
+</html>
